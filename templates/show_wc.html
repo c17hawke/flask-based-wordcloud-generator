@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Wordcloud</title>
+{% endblock title %}
+
+{% block searchbar %}
+<form action="/review" method="POST" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="content" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+{% endblock searchbar %}
+
+{% block body %}
+<!-- <div class="container" style="padding-top: 3%;">
+<h1>show word cloud</h1>
+<img src="https://images.pexels.com/photos/3617457/pexels-photo-3617457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+</div> -->
+<div class="text-center word-cloud">
+<figure class="figure img-fluid">
+    <img src="{{ user_image }}" class="figure-img img-fluid rounded" alt="...">
+    <figcaption class="figure-caption">Wordcloud</figcaption>
+  </figure>
+</div>
+<style>
+body{
+    
+  margin-top: 4%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+{% endblock body %}

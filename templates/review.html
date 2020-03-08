@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<title>Reviews</title>
+
+{% endblock title %}
+
+<!-- <div class="container"> -->
+        {% block word_cloud %}
+        <li class="nav-item btn-outline-success">
+                <a class="nav-link" href="/show">Wordcloud</a>
+        </li>
+        <li class="nav-item btn-outline-success">
+                <a class="nav-link" href="{{ download_csv }}">Download Data</a>
+        </li>
+        {% endblock word_cloud %}
+
+
+        {% block searchbar %}
+
+        <form action="/review" method="POST" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="content" type="search" placeholder="Search"
+                        aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        {% endblock searchbar %}
+<!-- </div> -->
+
+{% block body %}
+<div class="container">
+        {% for table in tables %}
+        <h3>{{ table | safe }}</h3>
+        {% endfor %}
+
+</div>
+{% endblock body %}
