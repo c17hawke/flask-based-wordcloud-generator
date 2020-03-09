@@ -1,6 +1,8 @@
 # Flask based wordcloud generator
-This is a flask based app to scrap user reviews and comments from a retail website and generates word-cloud with CSV data. 
+This is a flask based app to scrap user reviews and comments from a retail website and generates word-cloud with CSV data.
 The data that was gathered is available to download as well.
+
+This could be a way to showcase a buyer that what in general other consumers are feeling about that product.
 
 **For live demo you can check here-  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)](c17hawke-scraper01.herokuapp.com)**
 
