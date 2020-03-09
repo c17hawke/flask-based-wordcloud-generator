@@ -4,7 +4,7 @@ The data that was gathered is available to download as well.
 
 This could be a way to showcase a buyer that what in general other consumers are feeling about that product.
 
-**For live demo you can check here- http://c17hawke-scraper01.herokuapp.com/
+**For live demo you can check here- [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)](http://c17hawke-scraper01.herokuapp.com/)
 
 ## Following is some screenshots from the project -
 ### 1. Home page with a search bar to search a product.
