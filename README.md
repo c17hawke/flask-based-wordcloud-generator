@@ -2,7 +2,7 @@
 This is a flask based app to scrap user reviews and comments from a retail website and generates word-cloud with CSV data. 
 The data that was gathered is available to download as well.
 
-For live demo you can check here-  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)](c17hawke-scraper01.herokuapp.com)
+**For live demo you can check here-  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)](c17hawke-scraper01.herokuapp.com)**
 
 ## Following is some screenshots from the project -
 ### 1. Home page with a search bar to search a product.
