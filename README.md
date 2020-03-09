@@ -23,4 +23,4 @@ The data that was gathered is available to download as well.
 
 ### 5. View on my cellphone -
 
-<img src="https://github.com/c17hawke/peronal-blog-2020/blob/master/project_screenshots/flask-based-wordcloud-generator/view_on_phone.jpg?raw=true" width=300 height=600>
+![view on phone](https://github.com/c17hawke/peronal-blog-2020/blob/master/project_screenshots/flask-based-wordcloud-generator/view_on_phone.jpg?raw=true)
