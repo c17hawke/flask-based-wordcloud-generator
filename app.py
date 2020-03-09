@@ -261,4 +261,4 @@ def show_wordcloud():
 	return render_template("show_wc.html", user_image = full_filename)
 
 if __name__ == '__main__':
-	app.run(debug=False)
+	app.run()
