@@ -20,3 +20,7 @@ For live demo you can check [here](https://c17hawke-scraper01.herokuapp.com/) on
 ### 4. 404 page will be seen if you enter something gibrish or product is not spelled properly.
 
 ![404 error page](https://github.com/c17hawke/peronal-blog-2020/blob/master/project_screenshots/flask-based-wordcloud-generator/404.png?raw=true)
+
+### 5. View on my cellphone -
+
+<img src="https://github.com/c17hawke/peronal-blog-2020/blob/master/project_screenshots/flask-based-wordcloud-generator/view_on_phone.jpg?raw=true" width=300 height=600>
