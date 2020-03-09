@@ -207,7 +207,7 @@ def index():
 			product_name_Links = get_data.get_product_name_links(base_URL, bigBoxes)
 
 			# iterate over product name and links list
-			for prodName, productLink in product_name_Links:
+			for prodName, productLink in product_name_Links[:4]:
 				# iterate over product HTML
 				for prod_HTML in get_data.get_prod_HTML(productLink):
 					try:
