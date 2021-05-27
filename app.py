@@ -14,16 +14,28 @@ from flask import Flask, render_template,  session, redirect, request
 from flask_cors import CORS,cross_origin
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
+import ssl
 
 # define global paths for Image and csv folders
 IMG_FOLDER = os.path.join('static', 'images')
 CSV_FOLDER = os.path.join('static', 'CSVs')
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 # config environment variables
 app.config['IMG_FOLDER'] = IMG_FOLDER
 app.config['CSV_FOLDER'] = CSV_FOLDER
 
+# ssl certificate verification 
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
+else:
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
+	
 class DataCollection:
 	'''
 	class meant for collection and management of data
@@ -47,7 +59,7 @@ class DataCollection:
 		try:
 			# append Name of customer if exists else append default
 			self.data["Name"].append(commentbox.div.div.\
-				find_all('p', {'class': '_3LYOAd _3sxSiS'})[0].text)
+				find_all('p', {'class': '_2sc7ZR _2V5EHH'})[0].text)
 		except:
 			self.data["Name"].append('No Name')
 
@@ -201,7 +213,7 @@ def index():
 			flipkart_HTML = get_data.get_main_HTML(base_URL, search_string)
 
 			# store all the boxes containing products
-			bigBoxes = flipkart_HTML.find_all("div", {"class":"bhgxx2 col-12-12"})
+			bigBoxes = flipkart_HTML.find_all("div", {"class":"_1AtVbE col-12-12"})
 
 			# store extracted product name links
 			product_name_Links = get_data.get_product_name_links(base_URL, bigBoxes)
@@ -212,9 +224,9 @@ def index():
 				for prod_HTML in get_data.get_prod_HTML(productLink):
 					try:
 						# extract comment boxes from product HTML
-						comment_boxes = prod_HTML.find_all('div', {'class': '_3nrCtb'})
+						comment_boxes = prod_HTML.find_all('div', {'class': '_16PBlm'}) #_3nrCtb
 
-						prod_price = prod_HTML.find_all('div', {"class": "_1vC4OE _3qQ9m1"})[0].text
+						prod_price = prod_HTML.find_all('div', {"class": "_30jeq3 _16Jk6d"})[0].text
 						prod_price = float((prod_price.replace("₹", "")).replace(",", ""))
 						# iterate over comment boxes to extract required data
 						for commentbox in comment_boxes:
@@ -261,4 +273,4 @@ def show_wordcloud():
 	return render_template("show_wc.html", user_image = full_filename)
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
